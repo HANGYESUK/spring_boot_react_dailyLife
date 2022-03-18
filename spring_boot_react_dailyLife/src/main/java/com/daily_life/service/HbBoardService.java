@@ -21,11 +21,6 @@ public class HbBoardService implements IHbBoardService {
 	}
 
 	@Override
-	public void hbBoardDelete(int hb_bNo) {
-		dao.hbBoardDelete(hb_bNo);
-	}
-
-	@Override
 	public ArrayList<HbBoardVO> hbBoardList() {
 		return dao.hbBoardList();
 	}
