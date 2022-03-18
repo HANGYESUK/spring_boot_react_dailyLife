@@ -2,38 +2,42 @@ package com.daily_life.service;
 
 import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+import com.daily_life.dao.IBoardDAO;
 import com.daily_life.model.BoardVO;
 
+@Service
 public class BoardService implements IBoardService {
-
+	@Autowired
+	@Qualifier("IBoardDAO")
+	IBoardDAO dao;
+	
 	@Override
 	public void boardInsert(BoardVO vo) {
-		// TODO Auto-generated method stub
-
+		dao.boardInsert(vo);
 	}
 
 	@Override
 	public void boardUpdate(BoardVO vo) {
-		// TODO Auto-generated method stub
-
+		dao.boardUpdate(vo);
 	}
 
 	@Override
 	public void boardDelete(int bNo) {
-		// TODO Auto-generated method stub
-
+		dao.boardDelete(bNo);
 	}
 
 	@Override
 	public ArrayList<BoardVO> boardList() {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.boardList();
 	}
 
 	@Override
 	public BoardVO boardDetail(int bNo) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.boardDetail(bNo);
 	}
 
 }
