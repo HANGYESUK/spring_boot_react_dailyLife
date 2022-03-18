@@ -39,7 +39,7 @@ public class BoardController {
 	// 전체 목록 조회
 	@RequestMapping("/boardList")
 	public HashMap<String, Object> boardList() {
-		System.out.println("목록조회 컨트롤러 들어옴");
+		// System.out.println("목록조회 컨트롤러 들어옴");
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		map.put("boardList", service.boardList());	
 		return map; // boardList
@@ -55,7 +55,7 @@ public class BoardController {
 	// 상세 조회
 	@RequestMapping("/boardDetail/{bNo}")
 	public BoardVO boardDetail(@PathVariable int bNo) {		
-		System.out.println("상세조회 컨트롤러 들어옴");
+		// System.out.println("상세조회 컨트롤러 들어옴");
 		return service.boardDetail(bNo);
 	}
 }
