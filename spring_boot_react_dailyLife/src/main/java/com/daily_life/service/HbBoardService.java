@@ -2,32 +2,32 @@ package com.daily_life.service;
 
 import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+import com.daily_life.dao.IHbBoardDAO;
 import com.daily_life.model.HbBoardVO;
 
+@Service
 public class HbBoardService implements IHbBoardService {
-
+	@Autowired
+	@Qualifier("IHbBoardDAO")
+	IHbBoardDAO dao;
+	
 	@Override
 	public void hbBoardInsert(HbBoardVO vo) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void hbBoardDelete(int hb_bNo) {
-		// TODO Auto-generated method stub
-
+		dao.hbBoardInsert(vo);
 	}
 
 	@Override
 	public ArrayList<HbBoardVO> hbBoardList() {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.hbBoardList();
 	}
 
 	@Override
 	public HbBoardVO hbBoardDetail(int hb_bNo) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.hbBoardDetail(hb_bNo);
 	}
 
 }
