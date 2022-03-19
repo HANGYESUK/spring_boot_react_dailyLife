@@ -35,6 +35,11 @@
 			SELECT * FROM hb_board WHERE hb_bNo=#{hb_bNo} 		
 		</select>
 		
+		<!-- 행복저금통 이름 불러오기 -->
+		<select id="hbBoardHbName" parameterType="int" resultType="String">							  
+			SELECT hbName FROM happybank WHERE hbNo=#{hbNo} 		
+		</select>
+		
    </mapper>
    
    

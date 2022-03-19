@@ -9,6 +9,10 @@ public class HbBoardVO {
 	private int feelNo;
 	private int hbNo;
 	
+	private String memNick;
+	private String feelType;
+	private String hbName;
+	
 	public int getHb_bNo() {
 		return hb_bNo;
 	}
@@ -51,4 +55,23 @@ public class HbBoardVO {
 	public void setHbNo(int hbNo) {
 		this.hbNo = hbNo;
 	}
+	public String getMemNick() {
+		return memNick;
+	}
+	public void setMemNick(String memNick) {
+		this.memNick = memNick;
+	}
+	public String getFeelType() {
+		return feelType;
+	}
+	public void setFeelType(String feelType) {
+		this.feelType = feelType;
+	}
+	public String getHbName() {
+		return hbName;
+	}
+	public void setHbName(String hbName) {
+		this.hbName = hbName;
+	}
+	
 }

@@ -41,6 +41,16 @@
 			SELECT * FROM board WHERE bNo=#{bNo} 		
 		</select>
 		
+		<!-- 작성자 닉네임 불러오기 -->
+		<select id="boardMemberNick" parameterType="String" resultType="String">							  
+			SELECT memNick FROM member WHERE memEmail=#{memEmail} 		
+		</select>
+		
+		<!-- 기분 타입명 불러오기 ( 기쁨, 행복 ... ) -->
+		<select id="boardFeelType" parameterType="int" resultType="String">							  
+			SELECT feelType FROM feel WHERE feelNo=#{feelNo} 		
+		</select>
+		
    </mapper>
    
    

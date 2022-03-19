@@ -39,5 +39,15 @@ public class BoardService implements IBoardService {
 	public BoardVO boardDetail(int bNo) {
 		return dao.boardDetail(bNo);
 	}
+	
+	@Override
+	public String boardMemberNick(String memEmail) {
+		return dao.boardMemberNick(memEmail);
+	}
+	
+	@Override
+	public String boardFeelType(int feelNo) {
+		return dao.boardFeelType(feelNo);
+	}
 
 }

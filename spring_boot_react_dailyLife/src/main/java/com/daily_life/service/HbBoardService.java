@@ -29,5 +29,10 @@ public class HbBoardService implements IHbBoardService {
 	public HbBoardVO hbBoardDetail(int hb_bNo) {
 		return dao.hbBoardDetail(hb_bNo);
 	}
+	
+	@Override
+	public String hbBoardHbName(int hbNo) {
+		return dao.hbBoardHbName(hbNo);
+	}
 
 }
