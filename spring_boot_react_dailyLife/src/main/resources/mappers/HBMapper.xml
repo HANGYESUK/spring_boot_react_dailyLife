@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.daily_life.dao.IHBDAO">
+ 		<resultMap id="HBResult" type="com.daily_life.model.HBVO">
+ 			<result property="hbNo" column="hbNo" />
+ 			<result property="hbName" column="hbName" />
+ 			<result property="hbStartDate" column="hbStartDate" />
+ 			<result property="hbEndDate" column="hbEndDate" />
+ 			<result property="memEmail" column="memEmail" />
+ 		</resultMap>
+					
+ 		<!-- 생성 -->
+ 		<insert id="HBCreate" parameterType="com.daily_life.model.HBVO">
+ 			INSERT INTO happybank (hbNo, hbName, hbStartDate, hbEndDate, memEmail)
+ 			VALUES (#{hbNo}, #{hbName}, #{hbStartDate}, #{hbEndDate}, #{memEmail})
+ 		</insert>
+ 		
+ 		<!-- 수정 -->
+ 		<update id="HBUpdate" parameterType="com.daily_life.model.HBVO">
+ 			UPDATE happybank
+ 			SET hbName=#{hbName} <!-- , memEmail=#{memEmail} -->
+ 			WHERE hbNo=#{hbNo}
+ 		</update>
+ 		
+ 		<!-- 삭제 -->
+ 		<delete id="HBDelete" parameterType="int">
+ 			DELETE FROM happybank WHERE hbNo=#{hbNo}
+ 		</delete>
+ 		
+ 		<!-- 목록 : 유저 개인 -->
+ 		<select id="HBList" resultMap="HBResult">
+ 			SELECT * FROM happybank
+ 		</select>
+ 		
+ 		<!-- 개봉 : 유저 개인 -->
+ 		<select id="HBOpen" resultMap="HBResult" parameterType="int">
+ 			SELECT * FROM happybank WHERE hbNo=#{hbNo}
+ 		</select>
+
+ 		
+  </mapper>
