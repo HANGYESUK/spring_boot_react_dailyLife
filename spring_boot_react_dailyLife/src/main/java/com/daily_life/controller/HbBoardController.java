@@ -23,12 +23,6 @@ public class HbBoardController {
 		// String memEmail = (String)session.getAttribute("sid"); // session 받아오기
 		service.hbBoardInsert(vo);
 	}
-
-	// 삭제
-	@RequestMapping(value="/hbBoardDelete/{hb_bNo}")
-	public void hbBoardDelete(@PathVariable int hb_bNo) {	
-		service.hbBoardDelete(hb_bNo);		
-	}
 	
 	// 전체 목록 조회
 	@RequestMapping("/hbBoardList")
