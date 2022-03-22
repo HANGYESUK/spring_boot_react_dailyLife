@@ -17,7 +17,7 @@
 		<!-- 등록 -->
 		<insert id="hbBoardInsert" parameterType="com.daily_life.model.HbBoardVO">
 			INSERT INTO hb_board (memEmail, hb_bTitle, hb_bContent, hb_bWriteDate, feelNo, hbNo)
-			VALUES (#{memEmail}, #{bTitle}, #{bContent}, default, #{feelNo}, #{hbNo})
+			VALUES (#{memEmail}, #{hb_bTitle}, #{hb_bContent}, default, #{feelNo}, #{hbNo})
 		</insert>	
 		
 		<!-- 삭제 -->
