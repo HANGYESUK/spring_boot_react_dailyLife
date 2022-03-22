@@ -3,9 +3,14 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="com.daily_life.dao.IMemberDAO">
+  		<resultMap id="loginResult" type="com.daily_life.model.MemberVO">
+  			<result property="memEmail" column="memEmail"></result>
+  			<result property="memPw" column="memPw"></result>
+  		</resultMap>
+  		
   		
   		<!-- 로그인 확인 -->
-	<select id="loginCheck" resultType="com.daily_life.model.MemberVO" parameterType="hashmap">
+	<select id="loginCheck" resultMap="loginResult" parameterType="hashmap">
 		SELECT * FROM member WHERE memEmail=#{memEmail} AND memPw=#{memPw}
 	</select>
   		

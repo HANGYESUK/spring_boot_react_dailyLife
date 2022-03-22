@@ -5,6 +5,14 @@ public class MemberVO {
 	private String memPw;
 	private String memNick;
 	private String joinDate;
+	private String memImg;
+	
+	public String getMemImg() {
+		return memImg;
+	}
+	public void setMemImg(String memImg) {
+		this.memImg = memImg;
+	}
 	private String memInfo;
 	
 	
