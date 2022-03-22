@@ -14,8 +14,8 @@
 					
  		<!-- 생성 -->
  		<insert id="HBCreate" parameterType="com.daily_life.model.HBVO">
- 			INSERT INTO happybank (hbNo, hbName, hbStartDate, hbEndDate, memEmail)
- 			VALUES (#{hbNo}, #{hbName}, #{hbStartDate}, #{hbEndDate}, #{memEmail})
+ 			INSERT INTO happybank (hbNo, hbName, hbEndDate, memEmail)
+ 			VALUES (#{hbNo}, #{hbName}, #{hbEndDate}, #{memEmail})
  		</insert>
  		
  		<!-- 수정 -->
@@ -33,6 +33,11 @@
  		<!-- 목록 : 유저 개인 -->
  		<select id="HBList" resultMap="HBResult">
  			SELECT * FROM happybank
+ 		</select>
+ 		
+ 		<!-- 상세 정보 조회 -->
+ 		<select id="HBDetail" parameterType="int" resultType="com.daily_life.model.HBVO">
+ 			SELECT * FROM happybank WHERE hbNo=#{hbNo}
  		</select>
  		
  		<!-- 개봉 : 유저 개인 -->

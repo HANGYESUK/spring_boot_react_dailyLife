@@ -35,6 +35,11 @@ public class HBService implements IHBService {
 	public ArrayList<HBVO> HBList() {
 		return dao.HBList();
 	}
+	
+	@Override
+	public HBVO HBDetail(int hbNo) {
+		return dao.HBDetail(hbNo);
+	}
 
 	@Override
 	public ArrayList<HBVO> HBOpen(int hbNo) {

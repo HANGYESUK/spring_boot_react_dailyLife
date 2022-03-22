@@ -26,6 +26,8 @@ public class HBController {
 	// 저금통 수정
 	@RequestMapping(value="/HBUpdate")
 	public void HBUpdate(HBVO vo) {
+		System.out.println(vo.getHbName());
+		System.out.println(vo.getHbNo());
 		service.HBUpdate(vo);
 	}
 	// 저금통 삭제
@@ -33,13 +35,20 @@ public class HBController {
 	public void HBDelete(@PathVariable int hbNo) {
 		service.HBDelete(hbNo);
 	}
-	// 저금통 목록
+	// 저금통 전체 목록
 	@RequestMapping("/HBList")
 	public HashMap<String, Object> HBList() {
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		map.put("HBList", service.HBList());
 		return map;
 	}
+	
+	// 저금통 상세 정보 반환
+	@RequestMapping("/HBDetail/{hbNo}")
+	public HBVO HBDetail(@PathVariable int hbNo) {
+		return service.HBDetail(hbNo);
+	}
+	
 	// 저금통 오픈
 	@RequestMapping("/HBOpen")
 	public void HBOpen(@PathVariable int hbNo) {
