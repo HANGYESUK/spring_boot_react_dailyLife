@@ -51,6 +51,10 @@
 			SELECT feelType FROM feel WHERE feelNo=#{feelNo} 		
 		</select>
 		
+		<!-- 기분 이미지 불러오기 ( 이미지 파일명 ) -->
+		<select id="boardFeelIcon" parameterType="int" resultType="String">							  
+			SELECT feelIcon FROM feel WHERE feelNo=#{feelNo} 		
+		</select>		
    </mapper>
    
    

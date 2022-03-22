@@ -58,6 +58,10 @@ public class BoardController {
 			int feelNo = vo.get(i).getFeelNo();
 			vo.get(i).setFeelType(service.boardFeelType(feelNo));
 			// System.out.println(vo.get(i).getFeelType());
+			
+			// 기분 이미지 불러오기 ( 이미지 파일명 )
+			vo.get(i).setFeelIcon(service.boardFeelIcon(feelNo));
+			// System.out.println(vo.get(i).getFeelIcon());
 		}
 		
 		map.put("boardList", vo);
@@ -95,6 +99,11 @@ public class BoardController {
 		// 기분 타입명 불러오기 ( 기쁨, 행복 ... )
 		String feelType = service.boardFeelType(vo.getFeelNo());
 		vo.setFeelType(feelType);
+		
+		// 기분 이미지 불러오기 ( 이미지 파일명 )
+		String feelIcon = service.boardFeelIcon(vo.getFeelNo());
+		vo.setFeelIcon(feelIcon);
+		
 		return vo;
 	}
 }

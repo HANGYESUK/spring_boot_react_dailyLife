@@ -10,6 +10,7 @@ public class BoardVO {
 	
 	private String memNick;
 	private String feelType;
+	private String feelIcon;
 	
 	
 	public int getbNo() {
@@ -60,5 +61,10 @@ public class BoardVO {
 	public void setFeelType(String feelType) {
 		this.feelType = feelType;
 	}
-	
+	public String getFeelIcon() {
+		return feelIcon;
+	}
+	public void setFeelIcon(String feelIcon) {
+		this.feelIcon = feelIcon;
+	}
 }
