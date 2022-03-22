@@ -12,6 +12,7 @@ public class HbBoardVO {
 	private String memNick;
 	private String feelType;
 	private String hbName;
+	private String feelIcon;
 	
 	public int getHb_bNo() {
 		return hb_bNo;
@@ -72,6 +73,12 @@ public class HbBoardVO {
 	}
 	public void setHbName(String hbName) {
 		this.hbName = hbName;
+	}
+	public String getFeelIcon() {
+		return feelIcon;
+	}
+	public void setFeelIcon(String feelIcon) {
+		this.feelIcon = feelIcon;
 	}
 	
 }

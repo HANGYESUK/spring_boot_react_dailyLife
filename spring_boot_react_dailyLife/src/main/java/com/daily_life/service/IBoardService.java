@@ -13,5 +13,5 @@ public interface IBoardService {
 	
 	String boardMemberNick(String memEmail);// 작성자 닉네임 불러오기
 	String boardFeelType(int feelNo);// 기분 타입명 불러오기 ( 기쁨, 행복 ... )
-	// 기분 이미지 불러오기
+	String boardFeelIcon(int feelNo);// 기분 이미지 불러오기 ( 이미지 파일명 )
 }

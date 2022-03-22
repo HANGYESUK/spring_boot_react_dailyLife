@@ -49,5 +49,10 @@ public class BoardService implements IBoardService {
 	public String boardFeelType(int feelNo) {
 		return dao.boardFeelType(feelNo);
 	}
+	
+	@Override
+	public String boardFeelIcon(int feelNo) {
+		return dao.boardFeelIcon(feelNo);
+	}
 
 }
