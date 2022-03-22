@@ -20,12 +20,20 @@ public class MemberController {
 	
 	//로그인 처리
 	@RequestMapping("/login")
-	public MemberVO loginCheck(@RequestParam HashMap<String, Object> param) {
+	public String loginCheck(@RequestParam HashMap<String, Object> param) {
+
+		System.out.println("로그인체크");
+		System.out.println(param);
 		MemberVO vo = service.loginCheck(param);
-		
-		return vo;
-	}
-	
+		String result = "fail";
+		if(vo != null) {
+			//로그인 성공하면 세션 변수 지정
+			result = "success";
+		}
+		System.out.println(result);
+		return result;
+		}
+			
 	//이메일 중복확인
 	@RequestMapping("/memEmailCheck")
 	public String memEmailCheck(
@@ -39,7 +47,7 @@ public class MemberController {
 	}
 	
 	// 회원가입
-	@RequestMapping("/userJoin")
+	@RequestMapping("/join")
 	public void userJoin(MemberVO vo) {
 		service.memberJoin(vo);
 	}
