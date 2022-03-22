@@ -8,6 +8,10 @@ public class BoardVO {
 	private String bWriteDate;
 	private int feelNo;
 	
+	private String memNick;
+	private String feelType;
+	
+	
 	public int getbNo() {
 		return bNo;
 	}
@@ -44,4 +48,17 @@ public class BoardVO {
 	public void setFeelNo(int feelNo) {
 		this.feelNo = feelNo;
 	}
+	public String getMemNick() {
+		return memNick;
+	}
+	public void setMemNick(String memNick) {
+		this.memNick = memNick;
+	}
+	public String getFeelType() {
+		return feelType;
+	}
+	public void setFeelType(String feelType) {
+		this.feelType = feelType;
+	}
+	
 }
