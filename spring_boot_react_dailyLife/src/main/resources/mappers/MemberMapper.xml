@@ -17,7 +17,7 @@
   		<!-- 회원가입 -->
 	<insert id="memberJoin" parameterType="com.daily_life.model.MemberVO">
 		INSERT INTO member(memEmail, memPw, memNick, joinDate,  memInfo)
-		VALUES (#{memEmail}, #{memPw}, #{memNick}, #{memInfo})
+		VALUES (#{memEmail}, #{memPw}, #{memNick}, default, #{memInfo})
 	</insert>
   	
 	<!-- 회원 정보 -->
