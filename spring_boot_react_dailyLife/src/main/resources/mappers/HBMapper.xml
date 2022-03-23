@@ -31,8 +31,8 @@
  		</delete>
  		
  		<!-- 전체  목록 -->
- 		<select id="HBList" resultMap="HBResult">
- 			SELECT * FROM happybank ORDER BY hbNo DESC
+ 		<select id="HBList" resultMap="HBResult" parameterType="string">
+ 			SELECT * FROM happybank WHERE memEmail = #{memEmail} ORDER BY hbNo DESC
  		</select>
  		
  		<!-- 상세 정보 조회 -->

@@ -36,10 +36,11 @@ public class HBController {
 		service.HBDelete(hbNo);
 	}
 	// 저금통 전체 목록
-	@RequestMapping("/HBList")
-	public HashMap<String, Object> HBList() {
+	@RequestMapping("/HBList/{memEmail}")
+	public HashMap<String, Object> HBList(@PathVariable String memEmail) {
 		HashMap<String, Object> map = new HashMap<String, Object>();
-		map.put("HBList", service.HBList());
+		map.put("HBList", service.HBList(memEmail));
+		System.out.println("HB리스트");
 		return map;
 	}
 	
