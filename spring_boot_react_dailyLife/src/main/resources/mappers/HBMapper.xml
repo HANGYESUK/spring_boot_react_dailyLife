@@ -14,8 +14,8 @@
 					
  		<!-- 생성 -->
  		<insert id="HBCreate" parameterType="com.daily_life.model.HBVO">
- 			INSERT INTO happybank (hbNo, hbName, hbEndDate, memEmail)
- 			VALUES (#{hbNo}, #{hbName}, #{hbEndDate}, #{memEmail})
+ 			INSERT INTO happybank ( hbName, hbEndDate, memEmail)
+ 			VALUES ( #{hbName}, #{hbEndDate} ,#{memEmail})
  		</insert>
  		
  		<!-- 수정 -->
@@ -30,7 +30,7 @@
  			DELETE FROM happybank WHERE hbNo=#{hbNo}
  		</delete>
  		
- 		<!-- 목록 : 유저 개인 -->
+ 		<!-- 전체  목록 -->
  		<select id="HBList" resultMap="HBResult">
  			SELECT * FROM happybank ORDER BY hbNo DESC
  		</select>
