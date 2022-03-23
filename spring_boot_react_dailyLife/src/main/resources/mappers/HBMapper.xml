@@ -32,7 +32,7 @@
  		
  		<!-- 목록 : 유저 개인 -->
  		<select id="HBList" resultMap="HBResult">
- 			SELECT * FROM happybank
+ 			SELECT * FROM happybank ORDER BY hbNo DESC
  		</select>
  		
  		<!-- 상세 정보 조회 -->
