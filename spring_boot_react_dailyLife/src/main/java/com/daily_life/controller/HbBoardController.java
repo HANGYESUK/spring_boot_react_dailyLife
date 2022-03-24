@@ -30,10 +30,10 @@ public class HbBoardController {
 	}
 	
 	// 전체 목록 조회
-	@RequestMapping("/hbBoardList")
-	public HashMap<String, Object> hbBoardList() {
+	@RequestMapping("/hbBoardList/{hbNo}")
+	public HashMap<String, Object> hbBoardList(@PathVariable int hbNo) {
 		HashMap<String, Object> map = new HashMap<String, Object>();
-		map.put("hbBoardList", hbBoardService.hbBoardList());
+		map.put("hbBoardList", hbBoardService.hbBoardList(hbNo));
 		
 		// System.out.println("map : " + map);
 		// System.out.println("타입 : " + map.get("hbBoardList").getClass().getName());
@@ -56,7 +56,7 @@ public class HbBoardController {
 			// System.out.println(vo.get(i).getFeelIcon());
 			
 			// 행복저금통 이름 불러오기
-			int hbNo = vo.get(i).getHbNo();
+//			int hbNo = vo.get(i).getHbNo();
 			vo.get(i).setHbName(hbBoardService.hbBoardHbName(hbNo));
 			// System.out.println(vo.get(i).getHbName());
 

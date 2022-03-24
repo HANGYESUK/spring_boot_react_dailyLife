@@ -26,8 +26,8 @@
 		</delete>
 		
   		<!--  전체 목록 조회 -->
-	  	<select id="hbBoardList" resultMap="hbBoardResult">	  	  		
-				SELECT * FROM hb_board
+	  	<select id="hbBoardList" resultMap="hbBoardResult"  parameterType="int">	  	  		
+				SELECT * FROM hb_board WHERE hbNo=#{hbNo}
 		</select>
 		
 		<!-- 상세 정보 조회 -->

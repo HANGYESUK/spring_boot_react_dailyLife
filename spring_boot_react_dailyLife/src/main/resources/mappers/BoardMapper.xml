@@ -33,7 +33,8 @@
 		
   		<!--  전체 목록 조회 -->
 	  	<select id="boardList" resultMap="boardResult">	  	  		
-				SELECT * FROM board
+				SELECT * FROM board ORDER BY bWriteDate DESC
+
 		</select>
 		
 		<!-- 상세 정보 조회 -->

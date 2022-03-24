@@ -21,8 +21,8 @@ public class HbBoardService implements IHbBoardService {
 	}
 
 	@Override
-	public ArrayList<HbBoardVO> hbBoardList() {
-		return dao.hbBoardList();
+	public ArrayList<HbBoardVO> hbBoardList(int hbNo) {
+		return dao.hbBoardList(hbNo);
 	}
 
 	@Override
