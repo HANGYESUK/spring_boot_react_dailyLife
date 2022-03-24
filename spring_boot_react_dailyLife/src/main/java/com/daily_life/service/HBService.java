@@ -32,8 +32,8 @@ public class HBService implements IHBService {
 	}
 
 	@Override
-	public ArrayList<HBVO> HBList() {
-		return dao.HBList();
+	public ArrayList<HBVO> HBList(String memEmail) {
+		return dao.HBList(memEmail);
 	}
 	
 	@Override
